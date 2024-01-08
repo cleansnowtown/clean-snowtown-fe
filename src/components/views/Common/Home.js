@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 function LandingPage(props) {
-  useEffect(() => {
-    axios.get("/api/sample").then((response) => {
-      console.log(response);
-    });
-  }, []);
+
+  // useEffect(() => {
+  //   axios.get("/api/sample").then((response) => {
+  //     console.log(response);
+  //   });
+  // }, []);
 
   // const logoutHandler = () => {
   //     axios.get(`/api/v1/logout`)

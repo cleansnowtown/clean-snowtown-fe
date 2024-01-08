@@ -79,7 +79,7 @@ function RegisterPage(props) {
             },
           ]}
         >
-          <Input.Email />
+          <Input />
         </Form.Item>
 
         <Form.Item
@@ -94,7 +94,7 @@ function RegisterPage(props) {
             },
           ]}
         >
-          <Input.Name />
+          <Input />
         </Form.Item>
 
         <Form.Item
@@ -112,7 +112,31 @@ function RegisterPage(props) {
           <Input.Password />
         </Form.Item>
 
-        
+        <Form.Item
+          label="비밀번호 확인"
+          name="password"
+          value={ConfirmPassword}
+          onChange={onConfirmPasswordHandler}
+          rules={[
+            {
+              required: true,
+              message: "Please confirm your password!",
+            },
+          ]}
+        >
+          <Input.Password />
+        </Form.Item>
+
+        <Form.Item
+          wrapperCol={{
+            offset: 8,
+            span: 16,
+          }}
+        >
+          <Button type="primary" htmlType="submit">
+            회원가입
+          </Button>
+        </Form.Item>
       </Form>
 
       {/* <form
